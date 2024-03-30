@@ -27,7 +27,7 @@ const DropDown = ({ data, label }) => {
 
                 {data?.map((elem, index) => {
                     return (
-                        <MenuItem value={elem} key={index} >{elem}</MenuItem>
+                        <MenuItem value={elem} key={index}>{elem}</MenuItem>
                     )
                 })}
 

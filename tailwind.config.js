@@ -4,11 +4,12 @@ export default {
   theme: {
     extend: {},
     container: {
-      padding: "3rem",
+      padding: "2rem",
       center: true,
     },
     textColor: {
       primary: "#0D9276",
+      gray: "#31363F",
     },
   },
   plugins: [],

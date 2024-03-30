@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import { BsCartDash } from "react-icons/bs";
 import { FiHeart, FiUser } from "react-icons/fi";
 import { IoIosGitCompare } from "react-icons/io";
@@ -9,10 +9,31 @@ import DropDown from './components/dropDown';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { setLocationData } from './locationSlice/locationSlice';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import { MdOutlineAccountCircle } from "react-icons/md";
+import { FaJediOrder } from "react-icons/fa6";
+import { IoMdHeartEmpty } from "react-icons/io";
+import { IoSettingsOutline } from "react-icons/io5";
+import { GoSignOut } from "react-icons/go";
+
+
 
 const Header = () => {
-  const country = useSelector(state => state.locationSlice.country);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
   const dispatch = useDispatch();
+  const country = useSelector(state => state.locationSlice.country);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    console.log("Closing menu")
+    setAnchorEl(null);
+  };
+
+
   const locationApi = async (url) => {
     try {
       const response = await axios.get(url);
@@ -27,12 +48,6 @@ const Header = () => {
   useEffect(() => {
     locationApi("https://countriesnow.space/api/v0.1/countries/");
   }, [])
-
-
-  useEffect(() => {
-    console.log("country state", country);
-  }, [country])
-
 
   // data for categories
   const categories = [
@@ -64,31 +79,64 @@ const Header = () => {
       <DropDown data={country} label={"Location"} />
 
       <IconWrapper className='space-x-5'>
-        <div className='flex items-end space-x-1 relative'>
+        {/* Compare */}
+        <div className='flex items-end space-x-1 relative cursor-pointer'>
           <Count compare={true} >2</Count>
           <IoIosGitCompare size={23} />
           <IconsHeading className='text-sm'>Compare</IconsHeading>
         </div>
-        <div className='flex items-end space-x-1 relative'>
+        {/* WishList */}
+        <div className='flex items-end space-x-1 relative cursor-pointer'>
           <Count wishlist={true}>2</Count>
           <FiHeart size={23} />
           <IconsHeading className='text-sm'>WishList</IconsHeading>
         </div>
-        <div className='flex items-end space-x-1 relative'>
+        {/* Cart */}
+        <div className='flex items-end space-x-1 relative cursor-pointer'>
           <Count cart={true}>2</Count>
           <BsCartDash size={23} />
           <IconsHeading className='text-sm'>Cart</IconsHeading>
         </div>
-        <div className='flex items-end space-x-1 relative'>
+
+        {/* Account */}
+        <div className='flex items-end space-x-1 relative cursor-pointer' onClick={handleClick}>
           <Count account={true}>2</Count>
           <FiUser size={23} />
           <IconsHeading className='text-sm'>Account</IconsHeading>
         </div>
+        <Menu
+          id="basic-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            'aria-labelledby': 'basic-button',
+          }}
+        >
+          <MenuItem onClick={e => handleClose()} className='gap-2'>
+            <MdOutlineAccountCircle size={20} />
+            <span>My Account</span>
+          </MenuItem>
+          <MenuItem onClick={e => handleClose()} className='gap-2'>
+            <FaJediOrder size={20} />
+            <span> Order Tacking</span>
+          </MenuItem>
+          <MenuItem onClick={e => handleClose()} className='gap-2'>
+            <IoMdHeartEmpty size={20} />
+            <span>My WishList</span>
+          </MenuItem>
+          <MenuItem onClick={e => handleClose()} className='gap-2'>
+            <IoSettingsOutline size={20} />
+            <span>Settings</span>
+          </MenuItem>
+          <MenuItem onClick={e => handleClose()} className='gap-2'>
+            <GoSignOut size={20} />
+            <span>Sign Out</span>
+          </MenuItem>
+        </Menu>
+
       </IconWrapper>
-
-
-
-    </Container>
+    </Container >
   )
 }
 
@@ -100,7 +148,6 @@ const Container = styled.div`
   align-items: center;
 
 `
-
 const Logo = styled.img`
      width: 168px;
     height: 56px;
