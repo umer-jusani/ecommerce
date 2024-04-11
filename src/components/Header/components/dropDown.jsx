@@ -3,6 +3,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import React from 'react';
+import { FaHeadphones } from "react-icons/fa6";
 
 const DropDown = ({ data, label }) => {
     const [value, setValue] = React.useState('');
@@ -12,7 +13,7 @@ const DropDown = ({ data, label }) => {
 
     return (
         <FormControl sx={{ m: 1, minWidth: 120 }} >
-            <InputLabel id="demo-simple-select-helper-label"><span className='text-primary'>{label}</span></InputLabel>
+            <InputLabel id="demo-simple-select-helper-label">  <span className='text-primary'>{label}</span></InputLabel>
             <Select
                 labelId="demo-simple-select-helper-label"
                 id="demo-simple-select-helper"

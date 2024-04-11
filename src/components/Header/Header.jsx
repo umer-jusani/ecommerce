@@ -1,35 +1,37 @@
-import React, { useEffect, useReducer, useState } from 'react';
-import { BsCartDash } from "react-icons/bs";
-import { FiHeart, FiUser } from "react-icons/fi";
-import { IoIosGitCompare } from "react-icons/io";
-import { IoSearch } from "react-icons/io5";
-import styled from 'styled-components';
-import logo from '../../assets/images/logo.svg';
-import DropDown from './components/dropDown';
-import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
-import { setLocationData } from './locationSlice/locationSlice';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { MdOutlineAccountCircle } from "react-icons/md";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { BsCartDash } from "react-icons/bs";
 import { FaJediOrder } from "react-icons/fa6";
-import { IoMdHeartEmpty } from "react-icons/io";
-import { IoSettingsOutline } from "react-icons/io5";
+import { FiHeart, FiUser } from "react-icons/fi";
 import { GoSignOut } from "react-icons/go";
+import { IoIosGitCompare, IoMdHeartEmpty } from "react-icons/io";
+import { IoSearch, IoSettingsOutline } from "react-icons/io5";
+import { MdOutlineAccountCircle } from "react-icons/md";
+import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+import logo from '../../assets/images/logo.svg';
+import { categories } from '../../constant/constant';
+import Cart from './components/cart';
+import DropDown from './components/dropDown';
+import { setLocationData } from './locationSlice/locationSlice';
 
 
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [isOpenCart, setIsOpenCart] = useState(false)
   const open = Boolean(anchorEl);
   const dispatch = useDispatch();
   const country = useSelector(state => state.locationSlice.country);
+
+
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
-    console.log("Closing menu")
     setAnchorEl(null);
   };
 
@@ -49,23 +51,7 @@ const Header = () => {
     locationApi("https://countriesnow.space/api/v0.1/countries/");
   }, [])
 
-  // data for categories
-  const categories = [
-    'Milks and Dairies',
-    'Wines & Drinks',
-    'Clothing & beauty',
-    'Fresh Seafood',
-    'Pet Foods & Toy',
-    'Fast food',
-    'Baking material',
-    'Vegetables',
-    'Fresh Fruit',
-    'Bread and Juice',
-    'Milks and Dairies',
-    'Wines & Drinks',
-    'Clothing & beauty',
-    'Fresh Seafood'
-  ]
+
 
   return (
     <Container className='container py-3'>
@@ -91,12 +77,35 @@ const Header = () => {
           <FiHeart size={23} />
           <IconsHeading className='text-sm'>WishList</IconsHeading>
         </div>
+
+
+
+
+
+
+
+
+
+
+
         {/* Cart */}
-        <div className='flex items-end space-x-1 relative cursor-pointer'>
+        <div className='flex items-end space-x-1 relative cursor-pointer' onClick={() => setIsOpenCart(!isOpenCart)}>
           <Count cart={true}>2</Count>
           <BsCartDash size={23} />
           <IconsHeading className='text-sm'>Cart</IconsHeading>
+
         </div>
+        {isOpenCart && <Cart />}
+
+
+
+
+
+
+
+
+
+
 
         {/* Account */}
         <div className='flex items-end space-x-1 relative cursor-pointer' onClick={handleClick}>

@@ -11,6 +11,10 @@ export default {
       primary: "#0D9276",
       gray: "#31363F",
     },
+    backgroundColor: {
+      primary: "#0D9276",
+      lightPrimary: "#2AC08E"
+    },
   },
   plugins: [],
 };
