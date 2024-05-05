@@ -1,0 +1,26 @@
+.slick-arrow {
+  position: absolute;
+  top: -28%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #0d9276;
+  padding: 5px;
+}
+
+button.slick-arrow.slick-prev {
+  left: 90%;
+  color: #0d9276;
+}
+
+button.slick-arrow.slick-next {
+  right: 5%;
+}
+
+button.slick-arrow.slick-prev::before {
+  color: #0d9276;
+}
+
+button.slick-arrow.slick-next::before {
+  color: #0d9276;
+}

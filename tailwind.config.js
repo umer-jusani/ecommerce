@@ -5,15 +5,17 @@ export default {
     extend: {},
     container: {
       padding: "2rem",
-      center: true,
     },
     textColor: {
       primary: "#0D9276",
       gray: "#31363F",
+      Lightgray: "#7E7E7E",
+      sliderHeading: "rgba(0, 0, 0, 0.7)",
+      featuredProductHead: "#253D4E",
     },
     backgroundColor: {
       primary: "#0D9276",
-      lightPrimary: "#2AC08E"
+      lightPrimary: "#2AC08E",
     },
   },
   plugins: [],

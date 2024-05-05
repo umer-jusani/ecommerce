@@ -1,12 +1,11 @@
 import ListItemText from '@mui/material/ListItemText';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
-import Divider from '@mui/material/Divider';
 import React from 'react';
+import { AiOutlinePlusCircle } from "react-icons/ai";
 import styled from 'styled-components';
 import icon from '../../../assets/images/icon-1.svg';
-import { AiOutlinePlusCircle } from "react-icons/ai";
-import colors from '../../../theme';
+    import colors from '../../../theme';
 
 const BrowseCategories = () => {
     return (
@@ -24,7 +23,7 @@ const BrowseCategories = () => {
 
                     <MenuItem style={{ gap: 5 }}>
                         <img src={icon} alt="" width={30} height={30} />
-                        <ListItemText className='hover:text-primary' aria-valuetext='Pet Foods & Toy' onChange={()}>Pet Foods & Toy</ListItemText>
+                        <ListItemText className='hover:text-primary'>Pet Foods & Toy</ListItemText>
                     </MenuItem>
 
                     <MenuItem style={{ gap: 5 }}>

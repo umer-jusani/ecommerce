@@ -10,3 +10,33 @@
 body {
   box-sizing: border-box;
 }
+
+/* .slick-arrow {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 1000;
+  background-color: #0D9276;
+  color: #0d9276;
+  padding: 5px;
+}
+
+.slick-arrow .slick-prev {
+  left: 25%;
+  color: #0d9276;
+}
+
+.slick-arrow .slick-next {
+  right: 10%;
+  right: 25px;
+}
+
+.slick-prev:before {
+  color: #0d9276;
+}
+
+.slick-next:before {
+  color: #0d9276;
+} */

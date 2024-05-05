@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import HomeSlider from './components/homeSlider';
+import CategoriesSlider from './components/CategoriesSlider/categoriesSlider';
+import Banner from './components/Banner/banner';
+import PopularProducts from './components/PopularProducts';
 
 const Home = () => {
     return (
-        <div >
-            Home Page
+        <div className='overflow-hidden'>
+            <HomeSlider />
+            <CategoriesSlider />
+            <Banner />
+            <PopularProducts />
         </div>
     )
 }

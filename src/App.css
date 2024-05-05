@@ -11,3 +11,11 @@
 body {
   box-sizing: border-box;
 }
+
+input:focus {
+  outline: none;
+}
+
+.inputIcon {
+  transform: rotate(50deg);
+}

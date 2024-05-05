@@ -17,12 +17,11 @@ const Menu = () => {
             <Item colors={colors.primary}>About</Item>
             <Item colors={colors.primary}>Shop</Item>
             <Item colors={colors.primary}>Vendors</Item>
-
             {/* Mega Menu*/}
-            <MenuWrapper>
+            <MenuWrapper className=' '>
                 <Item colors={colors.primary} className='me-1'>Mega Menu</Item>
                 <FaChevronDown size={13} color={colors.primary} fontWeight={"bold"} />
-                <MenuItem className='space-y-1'>
+                <MenuItem className='space-y-1 bg-[white]'>
                     <li><Link to={"/about"}>About Us</Link></li>
                     <li>Contact</li>
                     <li>My Account</li>
@@ -36,13 +35,11 @@ const Menu = () => {
                     <li>404 Page</li>
                 </MenuItem>
             </MenuWrapper>
-
             {/* Blogs */}
             <MenuWrapper>
                 <Item colors={colors.primary} className='me-1'>Blog</Item>
                 <FaChevronDown size={13} color={colors.primary} fontWeight={"bold"} />
-
-                <MenuItem className='space-y-1'>
+                <MenuItem className='space-y-1 bg-[white]'>
                     <li>Fruits & Vegetables</li>
                     <li>Meat & Poultry</li>
                     <li>Herbs & Seasonings</li>
@@ -50,18 +47,12 @@ const Menu = () => {
                     <li>Exotic Fruits & Veggies</li>
                     <li>Packaged Produce</li>
                 </MenuItem>
-
             </MenuWrapper>
-
-
-
-
-
             {/* Pages */}
             <MenuWrapper>
                 <Item colors={colors.primary} className='me-1'>Pages</Item>
                 <FaChevronDown size={13} color={colors.primary} fontWeight={"bold"} />
-                <MenuItem className='space-y-1'>
+                <MenuItem className='space-y-1 bg-[white]'>
                     <li><Link to={"/about"}>About Us</Link></li>
                     <li>Contact</li>
                     <li>My Account</li>
@@ -75,9 +66,6 @@ const Menu = () => {
                     <li>404 Page</li>
                 </MenuItem>
             </MenuWrapper>
-
-
-
             <Item colors={colors.primary}>Contact</Item>
         </Container>
     )

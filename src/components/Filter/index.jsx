@@ -15,8 +15,8 @@ const Filter = () => {
   };
 
   return (
-    <MenuContainer className='container'>
-      <div className="flex gap-3 relative">
+    <MenuContainer>
+      <div className="flex gap-3 relative border-red-900">
         {/* Categories */}
         <div className='flex bg-primary gap-2 items-center  px-4 py-2 rounded-lg cursor-pointer hover:bg-lightPrimary' onClick={() => setIsOpen(!isOpen)}>
           <MdOutlineGridView color='white' />
@@ -40,11 +40,10 @@ const Filter = () => {
 }
 
 const MenuContainer = styled.div`
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
 `
 const Support = styled.div`
   display: flex;
