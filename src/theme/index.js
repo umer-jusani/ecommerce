@@ -5,6 +5,7 @@ const colors = {
   sliderHeading: "rgba(0, 0, 0, 0.7)",
   Lightgray: "#7E7E7E",
   featuredProductHead: "#253D4E",
+  borderColor: "#B4B4B8"
 };
 
 export default colors;

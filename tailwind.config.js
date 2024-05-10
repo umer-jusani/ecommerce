@@ -12,6 +12,7 @@ export default {
       Lightgray: "#7E7E7E",
       sliderHeading: "rgba(0, 0, 0, 0.7)",
       featuredProductHead: "#253D4E",
+      borderColor: "#B4B4B8",
     },
     backgroundColor: {
       primary: "#0D9276",

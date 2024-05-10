@@ -19,25 +19,9 @@ const PopularProducts = () => {
             </div>
 
             {/* products */}
-            {/* <div className='mt-[1rem] flex flex-wrap justify-between items-center border-2 border-red-800'> */}
-            {/* 
+            <div className='mt-[1rem] flex items-center'>
                 <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-
- */}
-
-
-            {/* </div> */}
+            </div>
 
         </section>
     )
