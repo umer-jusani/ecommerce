@@ -1,0 +1,4 @@
+UseMemo()
+
+=> calculateValue
+    The function calculating the value that you want to cache

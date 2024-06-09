@@ -62,8 +62,8 @@ const Container = styled.div`
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     padding: 1rem 1.5rem;
     z-index: 1;
-    top: 10%;
-    right: 1px;
+    top: 50px;
+    right: -100px;
     width: 350px;
 `
 
@@ -112,6 +112,7 @@ const ViewCart = styled.div`
     border-radius: 4px;
     font-size: 14px;
     padding: 5px 10px;
+    cursor: pointer;
 
     &:hover {
         background-color: #c5c565;
@@ -126,6 +127,7 @@ const Checkout = styled.div`
     color: white;
     border-radius: 4px;
     font-size: 14px;
+    cursor: pointer;
 
     &:hover {
         background-color: #c5c565;

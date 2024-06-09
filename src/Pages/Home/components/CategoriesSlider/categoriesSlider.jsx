@@ -33,12 +33,14 @@ const CategoriesSlider = () => {
         speed: 500,
         slidesToShow: 8,
         slidesToScroll: 1,
+        
     };
+    /* justify-content: space-between; */
 
     return (
-        <div className='mt-[2rem]'>
+        <div className='mt-[3rem]'>
             <div className='mb-6'>
-                <h1 className='text-[25px] font-bold container'>Featured Categories</h1>
+                <h1 className='section-Heading container'>Featured Categories</h1>
             </div>
             <Slider {...settings}>
                 {

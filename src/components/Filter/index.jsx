@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaAngleDown } from "react-icons/fa";
 import { FaHeadphones } from "react-icons/fa6";
 import { MdOutlineGridView } from "react-icons/md";
@@ -8,14 +8,30 @@ import Menu from './components/menu';
 
 const Filter = () => {
   const [value, setValue] = useState('');
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const headerRef = useRef(0)
 
   const handleChange = (event) => {
     setValue(event.target.value);
   };
 
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      let position = window.pageYOffset;
+      if (position > 40) {
+        headerRef.current.classList.add('navigation-OnScroll');
+
+      } else {
+        headerRef.current.classList.remove('navigation-OnScroll');
+      }
+    })
+  }, [])
+
+
+
   return (
-    <MenuContainer>
+    <MenuContainer ref={headerRef}>
       <div className="flex gap-3 relative border-red-900">
         {/* Categories */}
         <div className='flex bg-primary gap-2 items-center  px-4 py-2 rounded-lg cursor-pointer hover:bg-lightPrimary' onClick={() => setIsOpen(!isOpen)}>
@@ -44,6 +60,7 @@ const MenuContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem 1rem 2rem;
+  transition: all 0.5s ease-out;
 `
 const Support = styled.div`
   display: flex;

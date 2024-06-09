@@ -1,7 +1,7 @@
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { BsCartDash } from "react-icons/bs";
 import { FaJediOrder } from "react-icons/fa6";
 import { FiHeart, FiUser } from "react-icons/fi";
@@ -25,7 +25,7 @@ const Header = () => {
   const open = Boolean(anchorEl);
   const dispatch = useDispatch();
   const country = useSelector(state => state.locationSlice.country);
-
+  const headerRef = useRef(0)
 
 
   const handleClick = (event) => {
@@ -49,12 +49,12 @@ const Header = () => {
 
   useEffect(() => {
     locationApi("https://countriesnow.space/api/v0.1/countries/");
-  }, [])
+  }, []);
 
 
 
   return (
-    <Container className='container py-3'>
+    <Container className='container py-3' ref={headerRef}>
       <Logo src={logo} />
       <Wrapper className='space-x-2'>
         <DropDown data={categories} label={"Categories"} />
@@ -78,33 +78,13 @@ const Header = () => {
           <IconsHeading className='text-sm'>WishList</IconsHeading>
         </div>
 
-
-
-
-
-
-
-
-
-
-
         {/* Cart */}
         <div className='flex items-end space-x-1 relative cursor-pointer' onClick={() => setIsOpenCart(!isOpenCart)}>
           <Count cart={true}>2</Count>
           <BsCartDash size={23} />
           <IconsHeading className='text-sm'>Cart</IconsHeading>
-
+          {isOpenCart && <Cart />}
         </div>
-        {isOpenCart && <Cart />}
-
-
-
-
-
-
-
-
-
 
 
         {/* Account */}

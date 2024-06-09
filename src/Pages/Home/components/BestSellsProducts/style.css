@@ -1,0 +1,28 @@
+/* Daily Best Sells */
+.sc-khjJXk .slick-arrow {
+  position: absolute;
+  top: 40%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #0d9276;
+  padding: 5px;
+}
+
+.sc-khjJXk button.slick-arrow.slick-prev {
+  left: 1%;
+  color: #0d9276;
+  z-index: 1;
+}
+
+.sc-khjJXk button.slick-arrow.slick-next {
+  right: 1%;
+}
+
+.sc-khjJXk button.slick-arrow.slick-prev::before {
+  color: #0d9276;
+}
+
+.sc-khjJXk button.slick-arrow.slick-next::before {
+  color: #0d9276;
+}

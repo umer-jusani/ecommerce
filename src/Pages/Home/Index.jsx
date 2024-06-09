@@ -1,8 +1,10 @@
 import React from 'react';
-import HomeSlider from './components/homeSlider';
-import CategoriesSlider from './components/CategoriesSlider/categoriesSlider';
 import Banner from './components/Banner/banner';
+import BestSell from './components/BestSellsProducts';
+import CategoriesSlider from './components/CategoriesSlider/categoriesSlider';
 import PopularProducts from './components/PopularProducts';
+import HomeSlider from './components/homeSlider';
+import PreminumProducts from './components/PremiumProducts';
 
 const Home = () => {
     return (
@@ -11,6 +13,8 @@ const Home = () => {
             <CategoriesSlider />
             <Banner />
             <PopularProducts />
+            <BestSell />
+            <PreminumProducts />
         </div>
     )
 }

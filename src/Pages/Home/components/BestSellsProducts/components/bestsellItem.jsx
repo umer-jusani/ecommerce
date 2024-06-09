@@ -10,7 +10,7 @@ import { FaCodeCompare } from "react-icons/fa6";
 import { TbView360 } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 
-const Item = ({ tag }) => {
+const BestSellItem = ({ tag }) => {
     let ratingValue = 2;
 
     return (
@@ -91,7 +91,7 @@ const Overlay = styled.div`
 `
 
 const Container = styled.div`
-    width: 95%;
+    width: 98%;
     min-height: 300px;
     border: 1px solid rgba(0,0,0,0.2);
     border-radius: 15px;
@@ -143,7 +143,7 @@ const AddToCartContainer = styled.div`
             background-color: ${colors.primary};
             transition-duration: 0.4s;
         }
-    }
+    }   
 `
 
 const Badge = styled.div`
@@ -160,5 +160,5 @@ const Badge = styled.div`
 
 
 
-export default Item
+export default BestSellItem
 

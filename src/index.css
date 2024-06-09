@@ -11,32 +11,14 @@ body {
   box-sizing: border-box;
 }
 
-/* .slick-arrow {
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+.navigation-OnScroll {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  box-shadow: "0px 4px 2px -2px gray";
   z-index: 1000;
-  background-color: #0D9276;
-  color: #0d9276;
-  padding: 5px;
+  top: 0;
+  box-shadow: "0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.09)";
+  filter: drop-shadow(-2px 0px 10px gray);
+  transition: all 0.5s ease;
 }
-
-.slick-arrow .slick-prev {
-  left: 25%;
-  color: #0d9276;
-}
-
-.slick-arrow .slick-next {
-  right: 10%;
-  right: 25px;
-}
-
-.slick-prev:before {
-  color: #0d9276;
-}
-
-.slick-next:before {
-  color: #0d9276;
-} */

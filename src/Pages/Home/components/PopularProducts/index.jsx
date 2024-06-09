@@ -3,10 +3,10 @@ import Item from './components/item';
 
 const PopularProducts = () => {
     return (
-        <section className='border-2 border-sky-900 container mt-[2rem]'>
+        <section className='container mt-[3rem]'>
             {/* Heading and Menus */}
-            <div className='flex justify-between items-center'>
-                <h2 className='text-[25px] font-bold'>Popular Products</h2>
+            <div className='flex justify-between items-center mb-[2rem]'>
+                <h2 className='section-Heading'>Popular Products</h2>
                 <ul className='flex space-x-4 font-medium'>
                     <li className='cursor-pointer hover:text-primary'>All</li>
                     <li className='cursor-pointer hover:text-primary'>Milk&Diaries</li>
@@ -19,7 +19,22 @@ const PopularProducts = () => {
             </div>
 
             {/* products */}
-            <div className='mt-[1rem] flex items-center'>
+            <div className='grid grid-cols-5 gap-y-10'>
+                <Item tag={"sale"} />
+                <Item tag={"hot"} />
+                <Item />
+                <Item tag={"discount"} />
+                <Item />
+                <Item />
+                <Item />
+                <Item />
+                <Item />
+                <Item />
+                <Item />
+                <Item />
+                <Item />
+                <Item />
+                <Item />
                 <Item />
             </div>
 
