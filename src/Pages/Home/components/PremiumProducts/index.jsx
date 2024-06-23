@@ -4,7 +4,7 @@ import TopProducts from "./components/topProducts";
 
 const PreminumProducts = () => {
   return (
-    <Container className="container mt-[3rem] mb-[4rem] border-2 border-sky-950">
+    <Container className="container mt-[3rem] mb-[4rem]">
 
 
 

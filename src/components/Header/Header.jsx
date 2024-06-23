@@ -135,6 +135,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  max-width: 100%;  
 
 `
 const Logo = styled.img`

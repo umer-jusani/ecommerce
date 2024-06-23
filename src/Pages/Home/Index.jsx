@@ -3,8 +3,10 @@ import Banner from './components/Banner/banner';
 import BestSell from './components/BestSellsProducts';
 import CategoriesSlider from './components/CategoriesSlider/categoriesSlider';
 import PopularProducts from './components/PopularProducts';
-import HomeSlider from './components/homeSlider';
+import HomeSlider from './components/HomeSlider/homeSlider';
 import PreminumProducts from './components/PremiumProducts';
+import Newsletter from './components/newsletter';
+
 
 const Home = () => {
     return (
@@ -15,6 +17,7 @@ const Home = () => {
             <PopularProducts />
             <BestSell />
             <PreminumProducts />
+            <Newsletter />
         </div>
     )
 }

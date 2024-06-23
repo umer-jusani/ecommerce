@@ -1,13 +1,12 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { FaArrowPointer } from "react-icons/fa6";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import styled from 'styled-components';
-import slider1 from '../../../assets/images/slider-1.png';
-import slider2 from '../../../assets/images/slider-2.png';
-import colors from '../../../theme';
-// import { TbPointerFilled } from "react-icons/tb";
+import slider1 from '../../../../assets/images/slider-1.png';
+import slider2 from '../../../../assets/images/slider-2.png';
+import colors from '../../../../theme';
+import NewsletterSearchBar from '../../../../components/newsletter';
 
 
 const HomeSlider = () => {
@@ -46,11 +45,7 @@ const HomeSlider = () => {
                     </div>
                 </div>
             </Slider>
-            <InputWrapper>
-                <FaArrowPointer size={20} color={colors.primary} className='absolute top-4 left-2 inputIcon' />
-                <SliderIinput type="text" placeholder='Enter Your Placeholder' />
-                <button className='bg-primary py-2 px-6 rounded-3xl text-[white] text-[15px] ms-2'>Subscribe</button>
-            </InputWrapper>
+            {/* <NewsletterSearchBar /> */}
 
         </Container>
     )
@@ -88,22 +83,6 @@ const SliderHeading = styled.h1`
     border-radius: 1.6rem;
 `
 
-const SliderIinput = styled.input`
-    height: 20px;
-    padding: 1.5rem 2rem;
-    background-color: white;
-    &:hover{
-        border: 1px solid ${colors.primary};
-    }
-`
 
-const InputWrapper = styled.div`
-    position: absolute;
-    top: 55%;
-    left: 6rem;
-    filter: drop-shadow(-3px 10px 30px #0D9276);
-    z-index: -1;
-    
-`
 
 export default HomeSlider

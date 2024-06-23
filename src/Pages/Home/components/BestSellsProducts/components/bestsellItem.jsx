@@ -39,7 +39,7 @@ const BestSellItem = ({ tag }) => {
             </div>
             <div className='space-y-3 mt-2'>
                 <span className='text-sm'>Snack</span>
-                <h3 className='text-lg font-medium leading-[1.4rem] cursor-pointer hover:text-primary duration-[0.5s]'><Link> Seeds of Change Organic Quinoa,Brown,&Red Rice</Link></h3>
+                <h3 className='text-lg font-medium leading-[1.4rem] cursor-pointer hover:text-primary duration-[0.5s]'><Link>Seeds of Change Organic Quinoa,Brown,&Red Rice</Link></h3>
 
                 <div className='flex space-x-2 items-center'>
                     <Rating name="read-only" value={ratingValue} readOnly size='1' style={{ fontSize: "20px" }} />
