@@ -6,7 +6,7 @@ import PopularProducts from './components/PopularProducts';
 import HomeSlider from './components/HomeSlider/homeSlider';
 import PreminumProducts from './components/PremiumProducts';
 import Newsletter from './components/newsletter';
-
+import BannersWithOffer from './components/offersBanner';
 
 const Home = () => {
     return (
@@ -18,6 +18,7 @@ const Home = () => {
             <BestSell />
             <PreminumProducts />
             <Newsletter />
+            <BannersWithOffer />
         </div>
     )
 }

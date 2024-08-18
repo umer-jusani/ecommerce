@@ -4,6 +4,7 @@ import Filter from './components/Filter/index';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Index';
 import About from './Pages/About';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
         <Route path='/about' element={<About />} />
       </Routes>
 
-
+      <Footer />
     </BrowserRouter>
   )
 }

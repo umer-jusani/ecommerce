@@ -15,7 +15,6 @@ const Newsletter = () => {
                     </div>
                     <NewsletterSearchBar />
                 </Content>
-
                 <div>
                     <img src={NewsletterImage} alt="" className='h-full w-full' />
                 </div>

@@ -30,6 +30,7 @@ const SliderIinput = styled.input`
   height: 20px;
   padding: 1.5rem 2rem;
   background-color: white;
+  border-radius: 5px;
 `;
 
 export default NewsletterSearchBar;

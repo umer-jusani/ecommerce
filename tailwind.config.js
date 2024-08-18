@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {},
     container: {
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem",
+      },
     },
     textColor: {
       primary: "#0D9276",
@@ -17,6 +19,15 @@ export default {
     backgroundColor: {
       primary: "#0D9276",
       lightPrimary: "#2AC08E",
+    },
+    fontSize: {
+      h5: "13px",
+      footerHeadings: "22px",
+      Laptop_footerHeadings: "18px",
+      sm: "14px",
+    },
+    fontWeight: {
+      footerHeadings: "600",
     },
   },
   plugins: [],
